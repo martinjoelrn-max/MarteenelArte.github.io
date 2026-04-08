@@ -1,0 +1,249 @@
+.barrapri {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: #4B2112;
+    animation: entrada 1s ease-out;
+    }
+
+.contenedor {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+/* LOGO */
+.logopri {
+  width: 500px;
+  max-width: 100%;
+  height: auto;
+}
+
+/* MENÚ */
+.lista {
+  display: flex;
+  gap: 40px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-family: libre-bodoni, sans-serif;
+  font-weight: 500;
+  font-size: 1.2em;
+}
+
+.lista a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+  padding: 10px 15px;
+}
+
+/* HAMBURGUESA */
+#menu-toggle {
+  display: none;
+}
+
+.menu-icon {
+  display: none;
+  font-size: 35px;
+  color: white;
+  cursor: pointer;
+}
+
+/* 📱 MÓVIL */
+@media (max-width: 768px) {
+
+  .menu-icon {
+    display: block;
+  }
+
+  .menu {
+    width: 100%;
+    display: none;
+  }
+
+  #menu-toggle:checked + .menu-icon + .menu {
+    display: block;
+  }
+
+  .lista {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin-top: 15px;
+  }
+
+  .lista a {
+    font-size: 1.4rem;
+    padding: 12px;
+  }
+
+  .logopri {
+    width: 120px;
+  }
+}
+
+.ilustraciones {
+    background-color: #181B26;
+    clip-path: polygon(50% 1%, 100% 0, 100% 100%, 50% 99%, 0 100%, 0 0);
+    }
+
+.detalle {
+    background-color: #2e3241;
+    padding-bottom: 60px;
+    padding-top: 60px;
+    clip-path: polygon(50% 3%, 100% 0, 100% 100%, 50% 97%, 0 100%, 0 0);
+}
+
+.contenedor {
+    display: flex;
+    padding: 10px 20px;
+}
+
+
+.cuerpo {
+    margin-top: 200px;
+}
+
+
+.contacto {
+    background-color: #F0B071;
+    text-align: center;
+    padding: 70px 10px;
+    clip-path: ellipse(80% 100% at 50% 110%);
+    z-index: 2;
+}
+
+.habilidades {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    margin: 0 auto;
+}
+
+.habilidad {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0;
+    transform: scale(0.5);
+    animation: aM 8s infinite;
+}
+
+.trabajouno {
+    animation: showuno 1s ease-in-out;
+
+}
+
+.trabajodos {
+    animation: showdos 1s ease-in-out;
+
+}
+
+.habilidad:nth-child(2) { animation-delay: 2s; }
+.habilidad:nth-child(3) { animation-delay: 4s; }
+.habilidad:nth-child(4) { animation-delay: 6s; }
+
+.datos {
+
+}
+.ingreso {
+    background-color: #e7cdb3;
+    border: 1px solid #181B26;
+    color: rgb(0, 0, 0);
+    margin-top: 30px;
+    padding: 20px 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+    font-family: 'libre-bodoni', sans-serif;
+    font-size: 0.9em;
+    border-color: aliceblue;
+    border-radius: 20px;
+}
+
+.datos .boton {
+align-items: center;
+background-color: #F0B071;
+border: 3px solid #ffffff;
+color: rgb(255, 255, 255);
+font-family: 'libre-bodoni', sans-serif;
+font-size: 0.9em;
+padding-top: 10px;
+padding-bottom: 10px;
+padding-left: 80px;
+padding-right: 80px;
+border-radius: 15px;
+}
+
+ @keyframes entrada {
+    from {
+        transform: translateY(-100%); 
+        opacity: 0;                   
+    }
+    to {
+        transform: translateY(0);    
+        opacity: 1;                  
+    }
+}
+
+@keyframes aM {
+    0% {
+    opacity: 0;
+    transform: scale(0.5);
+    z-index: 3;
+    }
+
+    5% {
+        opacity: 1;
+        transform: scale(1.1);
+        z-index: 10;
+    }
+
+    20% {
+    opacity: 1;
+    transform: scale(1);
+    z-index: 10;
+    }
+
+    41% {
+        opacity: 0;
+        transform: scale(0.5);
+        z-index: 3;
+    }
+
+    100% {
+        opacity: 0;
+        transform: scale(0);
+        z-index: 3;
+    }
+     
+}
+
+@keyframes showuno {
+
+from {
+    transform: translateX(-100%);
+    opacity: 0;
+    }
+
+to {
+    transform: translate(0);
+    opacity: (1);
+}
+}
+
+@keyframes showdos {
+
+from {
+    transform: translateX(100%);
+    opacity: 0;
+    }
+
+to {
+    transform: translate(0);
+    opacity: (1);
+}
+}
